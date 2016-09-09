@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Fill in domains below, and run this file in cron
+
 isChange=0
 
 function isUrlChanged() {
@@ -25,6 +27,12 @@ function isUrlChanged() {
 
 }
 
+function seperator() {
+	echo "=========================="
+	echo ""
+
+}
+
 clear
 echo ""
 echo "#######################"
@@ -33,15 +41,14 @@ echo "#######################"
 echo "(x = change)"
 echo ""
 
-isUrlChanged ballweg.float.publicserver.xyz
-isUrlChanged overlook.float.publicserver.xyz
+isUrlChanged domain1.com
+isUrlChanged domain2.com
+isUrlChanged google.com
 
-echo "=========================="
-echo ""
+seperator
 
-isUrlChanged lan.office.float.publicserver.xyz
-isUrlChanged server1.office.float.publicserver.xyz
-isUrlChanged server2.office.float.publicserver.xyz
+isUrlChanged yahoo.com
+isUrlChanged facebook.com
 
 if [ $isChange == 1 ]; then
 	echo "";
