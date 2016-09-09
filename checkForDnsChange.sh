@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script does the real work of checking and comparing IPs
+
 if [ -z "$1" ]; then
 	echo "Need a URL as a parameter.";
 	exit 1;
